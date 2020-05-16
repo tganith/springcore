@@ -1,8 +1,9 @@
-package com.mylabs.springcore.example1.beans;
+package com.mylabs.springcore.scope.beans;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,15 +14,11 @@ public class Employee {
     @Value("myname")
     private String empName;
 
+
     @Autowired
     private Address address;
 
-
-    public Employee(){
-        System.out.println("employee object created !!!");
-    }
-
-    public int getEmpId() {
+   public int getEmpId() {
         return empId;
     }
 
@@ -35,10 +32,6 @@ public class Employee {
 
     public void setEmpName(String empName) {
         this.empName = empName;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
     }
 
     public Address getAddress() {

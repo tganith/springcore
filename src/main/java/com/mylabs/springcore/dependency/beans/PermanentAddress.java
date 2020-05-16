@@ -1,25 +1,27 @@
-package com.mylabs.springcore.example1.beans;
+package com.mylabs.springcore.dependency.beans;
 
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Address {
+@Primary
+public class PermanentAddress implements Address{
 
-    @Value("123456")
+    @Value("67890")
     private int pin;
-    @Value("my street")
+    @Value("my permanent street")
     private String streetName;
-    @Value("bangalore")
+    @Value("my permanent city")
     private String city;
 
 
-    public Address(){
-        System.out.println("Address object created !!!");
+    public PermanentAddress(){
+        System.out.println("Permanent Address object created !!!");
     }
 
-    public Address(int pin, String streetName, String city){
+    public PermanentAddress(int pin, String streetName, String city){
         this.pin = pin;
         this.streetName = streetName;
         this.city = city;

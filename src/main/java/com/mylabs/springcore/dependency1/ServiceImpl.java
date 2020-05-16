@@ -1,4 +1,4 @@
-package com.mylabs.springcore.example2;
+package com.mylabs.springcore.dependency1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
